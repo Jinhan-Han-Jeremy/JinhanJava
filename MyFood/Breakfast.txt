@@ -1,0 +1,58 @@
+import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+
+public class Breakfast
+{
+	static public void main(String[] args)
+	{
+		final String[] food = {"Eggs","Blueberry Pancakes",
+                                   "Bagels with Cream Cheese",
+					     "English Muffin","Yogurt",
+                                   "Corned Beef Hash","Toast",
+					     "Fries","Tea","Coffee","Hot Chocolate"};
+		final float[] prices = {2.75f,4.0f,1.5f,0.95f,1.0f,1.75f,
+                                    0.75f,1.0f,0.75f,1.20f,1.95f};
+
+		boolean[] choice = new boolean[food.length];
+		int[] quantity = new int[food.length];
+
+		Window screen = new Window("Ex5_12.java");	
+		screen.showWindow();
+
+		String[] reply = {"continue","quit"};
+		RadioButtons buttons = new 
+            RadioButtons(screen,"What next?",reply);		
+		
+		// declare menu, Order and Tab objects	
+		Menu menu;	
+		Order order;
+		Tab   amount;
+		
+		do
+		{
+			// clear screen
+			screen.clearTextArea();
+
+			// instantiate menu
+			menu = new Menu(screen, "Ben's Breakfast Bar Menu", 
+                                  food, prices);
+
+			// choose from menu
+			menu.showMenu();
+			choice = menu.selection();
+			
+			// instantiate cutomer order
+			order = new Order(choice);
+			quantity = order.quantityOrdered(screen);			
+
+			// instantiate customer tab
+			amount = new Tab(quantity, choice);
+			
+			// display tab on screen
+			amount.pickUpTheTab(screen,"Ben's Breakfast Bar");
+
+			// request to continue or quit
+			buttons.showRadioButtons();
+		} while (buttons.getNameOfButton().equals("continue"));
+	}
+}
