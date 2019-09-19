@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background1">
+<TextView        android:id="@+id/label1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Interest Rate:">
+        </TextView>
+    <EditText        android:id="@+id/ratetxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:layout_below="@id/label1">
+    </EditText>    
+    <TextView        android:id="@+id/label2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Deposit:"
+        android:layout_below="@id/ratetxt1">
+        </TextView>
+    <EditText        android:id="@+id/deposittxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:layout_below="@id/label2">
+        </EditText> 
+    <TextView        android:id="@+id/label3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Years:"
+        android:layout_below="@id/deposittxt1">
+        </TextView>
+    <EditText        android:id="@+id/yearstxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:layout_below="@id/label3">
+        </EditText>
+    <Button        android:id="@+id/calcbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yearstxt1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dip"
+        android:text="Calc">
+        </Button>
+    <Button        android:id="@+id/clearbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/calcbtn1"
+        android:layout_alignTop="@id/calcbtn1"
+        android:layout_alignParentRight="true"
+        android:text="Clear" >
+        </Button>
+    <TextView        android:id="@+id/label4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Accumulated Dinero"
+        android:layout_below="@id/calcbtn1">
+        </TextView>
+    <TextView        android:id="@+id/accumtxt1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@id/label4">
+        </TextView>
+</RelativeLayout>
