@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Robot
+comment0.text=\n\ Write\ a\ description\ of\ class\ Robot\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=theX\ theY
+comment1.target=Robot(int,\ int)
+comment2.params=
+comment2.target=void\ moveDown()
+comment3.params=x
+comment3.target=void\ moveHorizontally(int)
+comment4.params=
+comment4.target=void\ moveRight()
+comment4.text=@param\ x\ is\n
+numComments=5
